@@ -1,0 +1,40 @@
+.grid {
+  display: grid; }
+  .grid--main {
+    max-width: 300px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas: "result result" "numbers operators" "equals equals"; }
+  .grid--numbers {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr); }
+  .grid--operators {
+    grid-template-columns: 1;
+    grid-template-rows: repeat(4, 1fr); }
+
+.area {
+  min-height: 40px; }
+  .area--result {
+    grid-area: result; }
+  .area--numbers {
+    grid-area: numbers; }
+  .area--operators {
+    grid-area: operators; }
+  .area--equals {
+    grid-area: equals; }
+
+.button {
+  width: 100%;
+  height: 100%; }
+
+input {
+  width: 100%; }
+
+.result {
+  border: 1px solid teal;
+  display: block;
+  min-width: 200px;
+  min-height: 30px;
+  padding: 0.5em; }
+
+/*# sourceMappingURL=style.css.map */
