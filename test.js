@@ -1,24 +1,17 @@
 "use strict";
 
-/*function myCalc(value1, value2, sign) {
-
-	value1 = getId('first').value;
-	value2 = getId('second').value;
-	sign = getId('sign').value;
-	var result = getId('result');
-
-	var equation = value1 + sign + value2;
-
-	result.innerHTML = eval(equation);
-
-}*/
-
 addEventListenersToButtons();
+
+function clearResult() {
+	getId('result').value = "";
+}
+
+function myCalc() {
+	getId('result').value = convertToMath();
+}
 
 
 //======================================================
-
-
 
 
 function getClass(element) {
@@ -28,29 +21,21 @@ function getId(element) {
 	return document.getElementById(element);
 }
 
-
+//Update the display with new entry
 function displayValue(value) {
 	var newValue = value.srcElement.value;
-	getId('result').innerHTML += newValue;
+	getId('result').value += newValue;
 }
 
+//Check if button has been clicked
 function addEventListenersToButtons() {
 	var buttons = getClass('button');
 	for (let i = 0; i < buttons.length; i++) {
 		buttons[i].addEventListener("click", displayValue);
 	}
-}
+}	
 
+//Change result from string format to math
 function convertToMath() {
-
+	return eval(getId('result').value);
 }
-
-function myCalc() {
-	eval(getId('result').html());
-	console.log("result:");
-}
-
-
-/*$('button').click(function(){
-	var val = $(this).attr("value");
-});*/

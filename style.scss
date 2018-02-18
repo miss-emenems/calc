@@ -3,9 +3,10 @@
 	&--main {
 		max-width: 300px;
 		grid-template-columns: 4fr 1fr;
-		grid-template-rows: 1fr 4fr 1fr;
+		grid-template-rows: 1fr 1fr 4fr 1fr;
 		grid-template-areas: 
 			"result result"
+			"clear clear"
 			"numbers operators"
 			"equals equals"
 	}
@@ -33,27 +34,21 @@
 	&--equals {
 		grid-area: equals;
 	}
-}
-
-.cell {
-	//border: 1px solid blue;
+	&--clear {
+		grid-area: clear;
+	}
 }
 
 .button {
 	width: 100%;
-	height: 100%;
+	height: 40px;
 }
 
-
-
-
-input {
-	width: 100%;
-}
 .result {
 	border: 1px solid teal;
 	display: block;
-	min-width: 200px;
-	min-height: 30px;
+	height: 40px;
 	padding: 0.5em;
+	width: 100%;
+	box-sizing: border-box;
 }
