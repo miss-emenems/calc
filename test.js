@@ -46,6 +46,8 @@ function convertToMath() {
 }
 
 
+
+
 function myCalc() {
 	eval(getId('result').html());
 	console.log("result:");
